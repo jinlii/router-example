@@ -20,7 +20,7 @@ const crisisCenterRoutes: Routes = [
           {
             path: ':id',
             component: CrisisDetailComponent,
-            resolve: {
+            resolve: { //Resolve to perform route data retrieval before route activation.
              crisis: CrisisDetailResolver
            }
           },
