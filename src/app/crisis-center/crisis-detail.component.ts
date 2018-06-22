@@ -41,7 +41,7 @@ export class CrisisDetailComponent implements OnInit {
     this.crisis.name = this.editName;
     this.gotoCrises();
   }
-
+/* not needed CanDeactivateGuard is for this component already!
   canDeactivate(): Observable<boolean> | boolean {
     // Allow synchronous navigation (`true`) if no crisis or the crisis is unchanged
     if (!this.crisis || this.crisis.name === this.editName) {
@@ -51,7 +51,7 @@ export class CrisisDetailComponent implements OnInit {
     // observable which resolves to true or false when the user decides
     return this.dialogService.confirm('Discard changes?');
   }
-
+*/
   gotoCrises() {
     let crisisId = this.crisis ? this.crisis.id : null;
     // Pass along the crisis id if available

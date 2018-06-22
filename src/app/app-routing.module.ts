@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent }     from './not-found.component';
 import { ComposeMessageComponent }     from './compose-message.component';
 
+import { CanDeactivateGuard }      from './can-deactivate-guard.service';
 
 // The feature routes are now provided by the HeroesModule and the CrisisCenter modules.
 const appRoutes: Routes = [
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
      { enableTracing: true } // <-- debugging purposes only
    )
   ],
-  exports: [RouterModule]
-
+  exports: [RouterModule],
+  providers: [
+    CanDeactivateGuard
+  ]
 })
 export class AppRoutingModule { }

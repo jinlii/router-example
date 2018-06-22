@@ -7,6 +7,7 @@ import { CrisisCenterComponent }     from './crisis-center.component';
 import { CrisisDetailComponent }     from './crisis-detail.component';
 import { CrisisDetailResolver }   from './crisis-detail-resolver.service';
 
+import { CanDeactivateGuard }    from '../can-deactivate-guard.service';
 
 const crisisCenterRoutes: Routes = [
   {
@@ -20,6 +21,7 @@ const crisisCenterRoutes: Routes = [
           {
             path: ':id',
             component: CrisisDetailComponent,
+            canDeactivate: [CanDeactivateGuard],
             resolve: { //Resolve to perform route data retrieval before route activation.
              crisis: CrisisDetailResolver
            }

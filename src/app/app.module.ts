@@ -33,6 +33,7 @@ import { DialogService }           from './dialog.service';
     BrowserModule,
     BrowserAnimationsModule,
     HeroesModule,
+    CrisisCenterModule, // comment this out if this needs to be accessed via admin tab only
     LoginRoutingModule, // login routing will be picked up when nothing is entered on the url: localhost:4200, it will redirect to localhost:4200/login
     AdminModule,
     AppRoutingModule // // if this is imported before other modules, it will be picked up when nothing is entered on the url: localhost:4200, it will redirect to localhost:4200/heroes
