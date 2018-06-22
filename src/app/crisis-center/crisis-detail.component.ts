@@ -7,21 +7,7 @@ import { Crisis }         from './crisis.service';
 import { DialogService }  from '../dialog.service';
 
 @Component({
-  template: `
-  <div *ngIf="crisis">
-    <h3>"{{ editName }}"</h3>
-    <div>
-      <label>Id: </label>{{ crisis.id }}</div>
-    <div>
-      <label>Name: </label>
-      <input [(ngModel)]="editName" placeholder="name"/>
-    </div>
-    <p>
-      <button (click)="save()">Save</button>
-      <button (click)="cancel()">Cancel</button>
-    </p>
-  </div>
-  `,
+  templateUrl: './crisis-detail.component.html',
   styles: ['input {width: 20em}'],
   animations: [ slideInDownAnimation ]
 })

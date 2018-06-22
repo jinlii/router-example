@@ -21,7 +21,6 @@ export class CrisisService {
 
   getCrises() { return this.crises$; }
 
-
   getCrisis(id: number | string) {
     return this.getCrises().pipe(
       map(crises => crises.find(crisis => crisis.id === +id))
@@ -36,5 +35,11 @@ export class CrisisService {
       this.crises$.next(CRISES);
     }
   }
-
 }
+
+
+/*
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

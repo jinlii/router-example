@@ -8,7 +8,6 @@ import { switchMap }             from 'rxjs/operators';
 @Component({
   templateUrl: './crisis-list.component.html'
 })
-
 export class CrisisListComponent implements OnInit {
   crises$: Observable<Crisis[]>;
   selectedId: number;
@@ -22,9 +21,15 @@ export class CrisisListComponent implements OnInit {
     this.crises$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
         this.selectedId = +params.get('id');
-        console.log('this.selectedId : ', this.selectedId );
         return this.service.getCrises();
       })
     );
   }
 }
+
+
+/*
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
