@@ -15,7 +15,8 @@ import { LoginComponent }          from './login.component';
 import { AppRoutingModule } from './app-routing.module';
 //Heroes module is the owner of the Heroes components
 import { HeroesModule }     from './heroes/heroes.module';
-import { CrisisCenterModule }     from './crisis-center/crisis-center.module';
+// comment this out for lazy loading 
+// import { CrisisCenterModule }     from './crisis-center/crisis-center.module';
 //The root AppModule must neither load nor reference the AdminModule or its files.
 //import { AdminModule }     from './admin/admin.module'; -- comment this out because it is lazy loaded in app-routing.module.ts
 import { LoginRoutingModule }      from './login-routing.module';
@@ -36,9 +37,9 @@ import { DialogService }           from './dialog.service';
     BrowserModule,
     BrowserAnimationsModule,
     HeroesModule,
-    CrisisCenterModule, // comment this out if this needs to be accessed via admin tab only
+    //CrisisCenterModule, // comment this out for lazy loading ; comment this out if this needs to be accessed via admin tab only
     LoginRoutingModule, // login routing will be picked up when nothing is entered on the url: localhost:4200, it will redirect to localhost:4200/login
-//    AdminModule,
+//    AdminModule,  // comment this out for lazy loading
     AppRoutingModule // // if this is imported before other modules, it will be picked up when nothing is entered on the url: localhost:4200, it will redirect to localhost:4200/heroes
   ],
   providers: [DialogService],

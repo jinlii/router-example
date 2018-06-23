@@ -10,8 +10,8 @@ import { CrisisDetailResolver }   from './crisis-detail-resolver.service';
 import { CanDeactivateGuard }    from '../can-deactivate-guard.service';
 
 const crisisCenterRoutes: Routes = [
-  {
-    path: 'crisis-center',
+  { // CrisisCenterModule loads after you click the "Crisis Center" button.
+    path: '', // crisis-center-- no path, lazy loading in app-module
     component: CrisisCenterComponent,
     children: [
       {

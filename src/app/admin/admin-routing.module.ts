@@ -10,9 +10,9 @@ import { AuthGuard }                from '../auth-guard.service';
 
 const adminRoutes: Routes = [
   {
-    path: '',
+    path: '', // no path, lazy loading in app-module
     component: AdminComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard], //That CanLoad guard takes precedence over the preload strategy.
     children: [
       {
         path: '', //A component-less route makes it easier to guard child routes.
