@@ -1,9 +1,16 @@
 <h1>Angular Router</h1>
 <nav>
   <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
-  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+  <a routerLink="/superheroes" routerLinkActive="active">Heroes</a> <!--  RouterLinks aren't tied to route configuration -->
   <a routerLink="/admin" routerLinkActive="active">Admin</a>
-  
+<!-- like this too:
+<nav>
+  <a [routerLink]="['/crisis-center']">Crisis Center</a>
+  <a [routerLink]="['/crisis-center/1', { foo: 'foo' }]">Dragon Crisis</a>
+  <a [routerLink]="['/crisis-center/2']">Shark Crisis</a>
+</nav>
+<router-outlet></router-outlet>
+-->
   <!--  when the user clicks this link, display the component associated with the compose route
   in the popup outlet.
 

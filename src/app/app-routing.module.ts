@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     canLoad: [AuthGuard] //That CanLoad guard takes precedence over the preload strategy.
     //If you want to preload a module and guard against unauthorized access, drop the canLoad() guard method and rely on the canActivate() guard alone.
   },
-  { path: '',   redirectTo: '/heroes', pathMatch: 'full' }, // If the pathMatch value were 'prefix', every URL would match ''.
+  { path: '',   redirectTo: '/superheroes', pathMatch: 'full' }, // If the pathMatch value were 'prefix', every URL would match ''.
   { path: '**', component: PageNotFoundComponent }
 ];
 
